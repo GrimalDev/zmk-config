@@ -98,13 +98,13 @@
     combos {
       compatible = "zmk,combos";
       combo_del {
-          timeout-ms = <100>;
+          timeout-ms = <200>;
           key-positions = <12 18>;
           bindings = <&kp BACKSPACE>;
         };
 
       combo_enter {
-          timeout-ms = <100>;
+          timeout-ms = <200>;
           key-positions = <12 31>;
           bindings = <&kp RET>;
         };
