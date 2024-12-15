@@ -94,6 +94,7 @@
             >;
         };
     };
+
     combos {
       compatible = "zmk,combos";
       combo_esc {
@@ -101,5 +102,5 @@
           key-positions = <LC 0>;
           bindings = <&kp BACKSPACE>;
         };
-    }
+    };
 };
