@@ -26,7 +26,7 @@
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            // | SHFT |  Z  |  V  |  X  |  C  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
@@ -94,4 +94,12 @@
             >;
         };
     };
+    combos {
+      compatible = "zmk,combos";
+      combo_esc {
+          timeout-ms = <50>;
+          key-positions = <LC 0>;
+          bindings = <&kp BACKSPACE>;
+        };
+    }
 };
