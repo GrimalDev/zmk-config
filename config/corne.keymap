@@ -103,7 +103,7 @@
           bindings = <&kp BACKSPACE>;
         };
 
-      combo_del {
+      combo_enter {
           timeout-ms = <50>;
           key-positions = <12 32>;
           bindings = <&kp RET>;
