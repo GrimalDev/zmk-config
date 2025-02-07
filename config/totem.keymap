@@ -72,7 +72,7 @@
 
             bindings = <
          &kp Q  &kp W  &kp E  &kp R        &kp T           &kp Y    &kp U        &kp I         &kp O    &kp P
-         &kp A  &kp B  &kp D  &mt LCTRL F  &kp G           &kp H    &mt RCTRL J  &kp K         &kp L    &kp SEMICOLON
+         &kp A  &kp S  &kp D  &mt LCTRL F  &kp G           &kp H    &mt RCTRL J  &kp K         &kp L    &kp SEMICOLON
 &kp TAB  &kp Z  &kp V  &kp X  &kp C        &kp B           &kp N    &kp M        &kp COMMA     &kp DOT  &kp FSLH       &kp SQT
                        &sl 2  &sl 1        &kp LEFT_ALT    &kp ESC  &kp SPACE    &kp LEFT_GUI
             >;
@@ -101,7 +101,7 @@
         &kp EXCL         &kp AT           &kp HASH         &kp DLLR         &kp PRCNT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp EQUAL
         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE  &kp TILDE
 &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0    &kp CARET      &kp BACKSPACE         &trans                 &trans     &trans     &kp BACKSLASH
-                                          &trans           &gif             &trans             &kp ENTER      &kp LEFT_SHIFT        &trans
+                                          &trans           &gif             &trans             &kp ENTER      &sl 3                 &trans
             >;
         };
 
@@ -110,7 +110,7 @@
         action_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "ADJ";
+            label = "ACT";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -128,6 +128,16 @@
         &bootloader  &kp C_PREVIOUS            &kp C_NEXT            &kp C_PLAY_PAUSE  &trans    &trans         &kp LEFT    &kp DOWN    &kp UP        &kp RIGHT
 &trans  &trans       &kp C_MUTE                &kp C_VOLUME_DOWN     &kp C_VOL_UP      &trans    &bt BT_CLR     &bt BT_PRV  &bt BT_NXT  &out OUT_TOG  &kp F10    &trans
                                                &trans                &trans            &trans    &kp BACKSPACE  &kp RCTRL   &trans
+            >;
+        };
+
+        shift_layer {
+            label = "SFT";
+            bindings = <
+        &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)        &kp LS(T)    &kp LS(Y)  &kp LS(U)        &kp LS(I)      &kp LS(O)    &kp LS(P)
+        &kp LS(A)  &kp LS(S)  &kp LS(D)  &mt LCTRL LS(F)  &kp LS(G)    &kp LS(H)  &mt RCTRL LS(J)  &kp LS(K)      &kp LS(L)    &kp LS(SEMICOLON)
+&trans  &kp LS(Z)  &kp LS(V)  &kp LS(X)  &kp LS(C)        &kp LS(B)    &kp LS(N)  &kp LS(M)        &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)       &kp LS(SQT)
+                              &trans     &trans           &trans       &trans     &trans           &trans
             >;
         };
 
