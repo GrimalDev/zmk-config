@@ -73,7 +73,7 @@
             bindings = <
            &kp Q    &kp W  &kp E  &kp R  &kp T           &kp Y    &kp U      &kp I         &kp O    &kp P
            &kp A    &kp S  &kp D  &kp F  &kp G           &kp H    &kp J      &kp K         &kp L    &kp SEMICOLON
-&kp LCTRL  &lt 3 Z  &kp V  &kp X  &kp C  &kp B           &kp N    &kp M      &kp COMMA     &kp DOT  &lt 3 SLASH    &kp SQT
+&kp LCTRL  &lt 0 Z  &kp V  &kp X  &kp C  &kp B           &kp N    &kp M      &kp COMMA     &kp DOT  &lt 0 SLASH    &kp SQT
                            &sl 2  &sl 1  &kp LEFT_ALT    &kp ESC  &kp SPACE  &kp LEFT_GUI
             >;
         };
@@ -101,7 +101,7 @@
         &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp EQUAL
         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE  &kp TILDE
 &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp CARET      &kp BACKSPACE         &trans                 &trans     &trans     &kp BACKSLASH
-                                    &trans        &trans        &trans          &kp ENTER      &sl 3                 &trans
+                                    &trans        &trans        &trans          &kp ENTER      &trans                &trans
             >;
         };
 
@@ -128,16 +128,6 @@
         &bootloader  &kp C_PREVIOUS            &kp C_NEXT            &kp C_PLAY_PAUSE  &trans    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT     &trans
 &trans  &trans       &kp C_MUTE                &kp C_VOLUME_DOWN     &kp C_VOL_UP      &trans    &bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &out OUT_TOG  &kp F10  &trans
                                                &trans                &trans            &trans    &kp ENTER   &kp TAB     &trans
-            >;
-        };
-
-        shift_layer {
-            label = "SFT";
-            bindings = <
-        &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)    &kp LS(Y)  &kp LS(U)  &kp LS(I)      &kp LS(O)    &kp LS(P)
-        &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)    &kp LS(H)  &kp LS(J)  &kp LS(K)      &kp LS(L)    &kp LS(SEMICOLON)
-&trans  &kp LS(Z)  &kp LS(V)  &kp LS(X)  &kp LS(C)  &kp LS(B)    &kp LS(N)  &kp LS(M)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)       &kp LS(SQT)
-                              &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
