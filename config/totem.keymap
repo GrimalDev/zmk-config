@@ -101,7 +101,7 @@
         &kp EXCL         &kp AT           &kp HASH         &kp DLLR         &kp PRCNT          &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp EQUAL
         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp ASTERISK   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE  &kp TILDE
 &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0    &kp CARET      &kp BACKSPACE         &trans                 &trans     &trans     &kp BACKSLASH
-                                          &trans           &gif             &trans             &kp ENTER      &sl 3                 &trans
+                                          &trans           &trans           &trans             &kp ENTER      &sl 3                 &trans
             >;
         };
 
