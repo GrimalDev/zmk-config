@@ -17,6 +17,29 @@
 / {
     behaviors {
         #include "macros.dtsi"
+
+        left_ctrl: left_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_CTRL";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-while-undecided;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        right_ctrl: right_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_CTRL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-while-undecided;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -30,10 +53,10 @@
             //                          | GUI#36| LWR#37| SPC#38|   | ENT#39| RSE#40 | ALT#41|
 
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E  &kp R        &kp T           &kp Y       &kp U        &kp I         &kp O    &kp P     &kp BACKSLASH
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D  &mt LCTRL F  &kp G           &kp H       &mt RCTRL J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT    &kp Z  &kp V  &kp X  &kp C        &kp B           &kp N       &kp M        &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                &mo 2  &mo 1        &kp LEFT_ALT    &kp ESCAPE  &kp SPACE    &kp LEFT_WIN
+&kp TAB           &kp Q  &kp W  &kp E  &kp R               &kp T           &kp Y       &kp U                &kp I         &kp O    &kp P     &kp BACKSLASH
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D  &left_ctrl LCTRL F  &kp G           &kp H       &right_ctrl RCTRL J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp V  &kp X  &kp C               &kp B           &kp N       &kp M                &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                &mo 2  &mo 1               &kp LEFT_ALT    &kp ESCAPE  &kp SPACE            &kp LEFT_WIN
             >;
         };
 
