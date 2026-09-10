@@ -1,0 +1,3 @@
+description: Receive a display-only WPM sample over the Corne split link
+compatible: "zmk,behavior-oled-wpm"
+include: one_param.yaml

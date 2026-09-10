@@ -1,0 +1,6 @@
+config CORNE_OLED
+    bool "Portrait Corne OLED status screens"
+    default y if SHIELD_CORNE_OLED
+    depends on ZMK_DISPLAY && ZMK_SPLIT_BLE
+    select LV_USE_IMAGE
+    select ZMK_WPM if ZMK_SPLIT_ROLE_CENTRAL
