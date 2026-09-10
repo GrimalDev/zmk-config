@@ -27,6 +27,10 @@ into the SSD1306 buffer without scaling. Default display blanking on idle remain
 enabled. The host tests cover WPM freshness and exact portrait pixels; hardware
 is needed to verify physical orientation, battery readings and radio delivery.
 
+The image palette and screen background compensate for reversed luminance in
+Zephyr 4.1's LVGL monochrome conversion, giving lit text on a dark panel.
+Recheck this compensation when upgrading Zephyr's display conversion code.
+
 ## Build and flash
 
 Push the configuration branch, then download the `firmware` artifact from its

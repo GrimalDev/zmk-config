@@ -18,8 +18,10 @@ static const char *const layer_node_names[] = {
 #endif
 
 static uint8_t portrait[512];
-/* LVGL I1 palette: opaque black and white, followed by 128x32 packed pixels. */
-static uint8_t image_data[520] = {0, 0, 0, 255, 255, 255, 255, 255};
+/* Zephyr 4.1's LVGL mono conversion reverses I1 luminance on the SSD1306.
+ * Compensate here: index 0 must be physically dark, index 1 physically lit.
+ * Revisit when upgrading that conversion; portrait assets keep normal polarity. */
+static uint8_t image_data[520] = {255, 255, 255, 255, 0, 0, 0, 255};
 static const lv_image_dsc_t image_descriptor = {
     .header = {.magic = LV_IMAGE_HEADER_MAGIC, .cf = LV_COLOR_FORMAT_I1,
                .w = 128, .h = 32, .stride = 16},
@@ -75,7 +77,8 @@ static void refresh(lv_timer_t *timer) {
 lv_obj_t *zmk_display_status_screen(void) {
     lv_obj_t *screen = lv_obj_create(NULL);
     lv_obj_remove_style_all(screen);
-    lv_obj_set_style_bg_color(screen, lv_color_black(), 0);
+    /* Match the compensated palette's background, including uncovered pixels. */
+    lv_obj_set_style_bg_color(screen, lv_color_white(), 0);
     lv_obj_set_style_bg_opa(screen, LV_OPA_COVER, 0);
     lv_obj_remove_flag(screen, LV_OBJ_FLAG_SCROLLABLE);
     image = lv_image_create(screen);
