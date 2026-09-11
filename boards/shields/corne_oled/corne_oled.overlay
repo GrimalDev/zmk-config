@@ -1,0 +1,8 @@
+/ {
+    behaviors {
+        oled_wpm: oled_wpm {
+            compatible = "zmk,behavior-oled-wpm";
+            #binding-cells = <1>;
+        };
+    };
+};

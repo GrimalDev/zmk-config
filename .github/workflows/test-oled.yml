@@ -1,0 +1,17 @@
+name: OLED host tests
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: WPM lifetime and portrait pixel tests
+        run: |
+          cc -std=c11 -Wall -Wextra -Werror -fsanitize=address,undefined \
+            -Imodules/corne_oled modules/corne_oled/wpm_state.c \
+            tests/oled/test_wpm_state.c -o /tmp/test-wpm
+          /tmp/test-wpm
+          cc -std=c11 -Wall -Wextra -Werror -fsanitize=address,undefined \
+            -Imodules/corne_oled modules/corne_oled/render.c \
+            tests/oled/test_render.c -o /tmp/test-render
+          /tmp/test-render
