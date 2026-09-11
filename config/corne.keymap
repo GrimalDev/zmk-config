@@ -83,7 +83,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp LA(TAB)  &trans            &trans            &trans            &trans            &trans              &trans    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC
+&kp LA(TAB)  &kp K_PREVIOUS    &kp C_NEXT        &kp K_PLAY_PAUSE  &trans            &trans              &trans    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC
 &kp LCTRL    &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)    &kp LEFT  &kp DOWN           &kp UP_ARROW     &kp RIGHT   &trans                &trans
 &kp ENTER    &kp LG(NUMBER_6)  &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &kp LG(NUMBER_0)    &trans    &trans             &trans           &trans      &trans                &trans
                                                  &trans            &trans            &bootloader         &kp RET   &trans             &mo 3
