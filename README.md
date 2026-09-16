@@ -10,7 +10,7 @@
 
 ## Layer 2 - System
 
-<img width="1187" height="460" alt="image" src="https://github.com/user-attachments/assets/39ca2119-97dc-4df0-bea7-b75a853e068b" />
+<img width="1158" height="436" alt="image" src="https://github.com/user-attachments/assets/2f430a32-65c9-4381-87c5-01614dba2aa3" />
 
 ## Layer 3 - Media extended
 
